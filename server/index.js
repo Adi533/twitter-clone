@@ -28,11 +28,11 @@ app.use('/api/tweets',tweetRoutes);
 app.get('/', (req, res) => {
     res.send("Hello World");
 })
-if(process.env.NODE_ENV == 'production'){
-    app.use(express.static("client/build"));
-}
-const PORT = process.env.PORT || 8000;
-app.listen(PORT,()=>{
+// if(process.env.NODE_ENV == 'production'){
+//     app.use(express.static("client/build"));
+// }
+const port = process.env.PORT || 8000;
+app.listen(port,()=>{
     connect();
     // console.log("Server started at port 8000");
 })
