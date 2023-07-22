@@ -17,7 +17,7 @@ const Signin = () => {
         e.preventDefault();
         dispatch(loginStart());
         try{
-            const res = await axios.post(`${process.env.REACT_APP_SERVER_URL}/auth/signin`,{username,password});
+            const res = await axios.post("/auth/signin",{username,password});
             dispatch(loginSuccess(res.data));
             navigate("/");
 
@@ -33,7 +33,7 @@ const Signin = () => {
         e.preventDefault();
         dispatch(loginStart());
         try{
-            const res = await axios.post(`${process.env.REACT_APP_SERVER_URL}/auth/signup`,{username,password,email});
+            const res = await axios.post("/auth/signup",{username,password,email});
             dispatch(loginSuccess(res.data));
             navigate("/");
 

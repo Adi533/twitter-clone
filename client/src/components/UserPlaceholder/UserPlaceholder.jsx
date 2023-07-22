@@ -10,7 +10,7 @@ const UserPlaceholder = ({ setUserData, userData }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const userProfile = await axios.get(`${process.env.REACT_APP_SERVER_URL}/users/find/${id}`);
+        const userProfile = await axios.get(`/users/find/${id}`);
         setUserData(userProfile.data);
       } catch (e) {
         // console.log(e);

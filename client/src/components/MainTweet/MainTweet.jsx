@@ -12,7 +12,7 @@ const MainTweet = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const submitTweet = await axios.post(`${process.env.REACT_APP_SERVER_URL}/tweets`, {
+      const submitTweet = await axios.post("/tweets", {
         userId: currentUser._id,
         description: tweetText,
       });

@@ -12,7 +12,7 @@ const TimelineTweet = () => {
         const fetchData = async () => {
             try {
                 const timelineTweets = await axios.get(
-                    `${process.env.REACT_APP_SERVER_URL}/tweets/timeline/${currentUser._id}`
+                    `/tweets/timeline/${currentUser._id}`
                 );
 
                 setTimeLine(timelineTweets.data);
